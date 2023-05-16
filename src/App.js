@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     function GetAllBuyInDataInfo() {
       return axios
-          .get(`http://localhost:8080/allbuyindata`)
+          .get(`https://stocktrack-backend-api.herokuapp.com/allbuyindata`)
           .then((element) => {
               let buyindata_info = element.data;
               setAllBuyInRecordData(buyindata_info);

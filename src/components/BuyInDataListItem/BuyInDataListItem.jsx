@@ -11,7 +11,7 @@ function BuyInDataListItem(props) {
     useEffect(() => {
         if (ClickedDelete === true) {
         axios
-            .delete(`http://localhost:8080/allbuyindata/${props.BuyInSingleRecord?.id}`)
+            .delete(`https://stocktrack-backend-api.herokuapp.com/allbuyindata/${props.BuyInSingleRecord?.id}`)
             .then((res) => {
             console.log(props.BuyInSingleRecord?.id);
             console.log(res.status);

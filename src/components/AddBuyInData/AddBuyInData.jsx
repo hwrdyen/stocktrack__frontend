@@ -27,7 +27,7 @@ function AddBuyInData(props) {
     useEffect(() => {
         if (ClickAddBuyInSubmit === true) {
             axios
-            .post(`http://localhost:8080/allbuyindata/`, AddBuyInDataInfo)
+            .post(`https://stocktrack-backend-api.herokuapp.com/allbuyindata/`, AddBuyInDataInfo)
             .then((res) => {
               console.log(res);
               setClickAddBuyInSubmit(false);
