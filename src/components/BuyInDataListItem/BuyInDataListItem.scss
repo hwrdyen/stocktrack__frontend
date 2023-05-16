@@ -7,10 +7,36 @@
     // BuyInDataListItem__container
     &__container {
         @include mobile {
+            color: black;
             border: 1px solid black;
             margin: 5px;
+            margin-bottom: 15px;
             display: grid; 
+            grid-template-columns: auto auto;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    // BuyInDataListItem__infosection
+    &__infosection {
+        @include mobile {
+            display: grid; 
+            grid-template-columns: auto auto auto;
+        }
+        @include tablet {
             grid-template-columns: auto auto auto auto auto auto;
+        }
+        @include desktop {
+        }
+    }
+
+    // BuyInDataListItem__infobox
+    &__infobox {
+        @include mobile {
+            border: 1px solid black;
         }
         @include tablet {
         }
@@ -22,6 +48,32 @@
     &__title {
         @include mobile {
             font-weight: bold;
+            border-bottom: 1px dotted grey;
+            padding-left: 5px;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    // BuyInDataListItem__result
+    &__result {
+        @include mobile {
+            padding-left: 5px;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    // BuyInDataListItem__button--delete
+    &__button--delete {
+        @include mobile {
+            background-color: $instock-graphite;
+            color: $instock-white;
+            cursor: pointer;
         }
         @include tablet {
         }

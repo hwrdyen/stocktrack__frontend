@@ -1,0 +1,22 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variable" as *;
+
+.BuyInRecord {
+    &__button {
+        @include mobile {
+            width: 95%;
+            height: auto;
+            background-color: $instock-graphite;
+            color: $instock-white;
+            margin: 10px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+}

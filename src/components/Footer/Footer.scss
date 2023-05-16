@@ -2,3 +2,17 @@
 @use "../../styles/mixins" as *;
 @use "../../styles/typography" as *;
 @use "../../styles/variable" as *;
+
+.Footer {
+    &__container {
+        @include mobile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+}

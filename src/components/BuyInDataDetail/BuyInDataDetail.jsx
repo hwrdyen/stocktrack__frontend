@@ -21,7 +21,7 @@ function BuyInDataDetail(props) {
         <>
             <div className="BuyInDataDetail__container">
                 <NavLink to={"/buyinrecord"}>
-                    <button>&lt;回到買入紀錄</button>
+                    <button className="BuyInDataDetail__button--previous">&lt; 回到買入紀錄</button>
                 </NavLink>
                 <div className="BuyInDataDetail__infosection">
                     <div className="BuyInDataDetail__title">買入日期</div>

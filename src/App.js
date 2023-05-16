@@ -19,38 +19,23 @@ import BuyInDataDetail from "./components/BuyInDataDetail/BuyInDataDetail.jsx";
 import AddBuyInData from "./components/AddBuyInData/AddBuyInData.jsx";
 
 function App() {
-
+  const [RequiredReLoading, setRequiredReLoading] = useState(true);
   const [AllBuyInRecordData, setAllBuyInRecordData] = useState([]);
 
-
-//   // useEffect - GetAllWarehousesInfo
-//   useEffect(() => {
-//     function GetAllWarehousesInfo() {
-//         return axios
-//             .get(`http://localhost:8080/warehouses`)
-//             .then((element) => {
-//                 let warehouses_info = element.data;
-//                 setAllWarehousesInfo(warehouses_info);
-//                 setRequiredReLoading(false);
-//             });
-//     }
-//     if (RequiredReLoading === true) {
-//         GetAllWarehousesInfo();
-//     }
-// }, [AllWarehousesInfo, RequiredReLoading]);
-
-
   useEffect(() => {
-    function GetAllWarehousesInfo() {
+    function GetAllBuyInDataInfo() {
       return axios
           .get(`http://localhost:8080/allbuyindata`)
           .then((element) => {
               let buyindata_info = element.data;
               setAllBuyInRecordData(buyindata_info);
+              setRequiredReLoading(false);
           });
     }
-    GetAllWarehousesInfo();
-  }, [AllBuyInRecordData])
+    if (RequiredReLoading === true) {
+      GetAllBuyInDataInfo();
+    }
+  }, [AllBuyInRecordData, RequiredReLoading])
 
   console.log(AllBuyInRecordData);
 
@@ -71,12 +56,13 @@ function App() {
           <Routes>
               <Route 
                 path="/" 
-                element={<StockBase AllBuyInRecordData={AllBuyInRecordData}/>}
+                // element={<StockBase AllBuyInRecordData={AllBuyInRecordData}/>}
+                element={<BuyInRecord AllBuyInRecordData={AllBuyInRecordData} setRequiredReLoading={setRequiredReLoading}/>}
               />
   
               <Route 
                 path="/buyinrecord" 
-                element={<BuyInRecord AllBuyInRecordData={AllBuyInRecordData} />}
+                element={<BuyInRecord AllBuyInRecordData={AllBuyInRecordData} setRequiredReLoading={setRequiredReLoading}/>}
               />
   
               <Route 
@@ -86,7 +72,7 @@ function App() {
 
               <Route 
                 path="/addbuyinrecord" 
-                element={<AddBuyInData AllBuyInRecordData={AllBuyInRecordData} setAllBuyInRecordData={setAllBuyInRecordData} />}
+                element={<AddBuyInData AllBuyInRecordData={AllBuyInRecordData} setAllBuyInRecordData={setAllBuyInRecordData} setRequiredReLoading={setRequiredReLoading}/>}
               />
   
           </Routes>

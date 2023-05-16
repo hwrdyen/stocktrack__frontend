@@ -18,6 +18,22 @@
         }
     }
 
+    // BuyInDataDetail__button--previous
+    &__button--previous {
+        @include mobile {
+            margin-top: 10px;
+            margin-left: 10px;
+            padding: 5px; 
+            border-radius: 10px;
+            background-color: $instock-graphite;
+            color: $instock-white;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
     // BuyInDataDetail__infosection
     &__infosection {
         @include mobile {

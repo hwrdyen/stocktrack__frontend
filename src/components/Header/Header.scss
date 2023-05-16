@@ -9,6 +9,7 @@
         background-color: $instock-graphite;
 
         @include mobile {
+            padding: 15px;
             display: flex;
             flex-direction: column;
         }
@@ -38,6 +39,7 @@
         @include mobile {
             color: white;
             font-weight: bold;
+            margin-bottom: 10px;
         }
         @include tablet {
         }

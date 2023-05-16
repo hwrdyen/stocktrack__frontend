@@ -15,11 +15,11 @@ function Header() {
                 </div>
                 
                 <div className="Header-title__container">
-                    <NavLink to={"/"}>
+                    {/* <NavLink to={"/"}>
                         <div className="Header-title__button">
                             股票庫存
                         </div>
-                    </NavLink>
+                    </NavLink> */}
 
                     <NavLink to={"/buyinrecord"}>
                         <div className="Header-title__button">

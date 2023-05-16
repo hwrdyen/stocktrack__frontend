@@ -4,10 +4,12 @@ import "./AddBuyInData.scss";
 // import dependencies
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import * as uuid from "uuid";
 
 function AddBuyInData(props) {
+    const navigate = useNavigate();
+
     const [ClickAddBuyInSubmit, setClickAddBuyInSubmit] = useState(false);
     const [AddBuyInDataInfo, setAddBuyInDataInfo] = useState({
         id: uuid.v4(),
@@ -29,6 +31,7 @@ function AddBuyInData(props) {
             .then((res) => {
               console.log(res);
               setClickAddBuyInSubmit(false);
+              navigate("/");
             })
             .catch((err) => console.log(err));
         }
@@ -62,6 +65,7 @@ function AddBuyInData(props) {
         };
         setAddBuyInDataInfo(AddedBuyInDataObj);
         setClickAddBuyInSubmit(true);
+        props.setRequiredReLoading(true);
         form.reset();
     }
 
@@ -69,12 +73,12 @@ function AddBuyInData(props) {
         <>
             <div className="AddBuyInData__container">
                 <NavLink to={"/buyinrecord"}>
-                    <button>&lt;回到買入紀錄</button>
+                    <button className="AddBuyInData__button--previous">&lt; 回到買入紀錄</button>
                 </NavLink>
                 <form className="AddBuyInData__form" id="AddBuyInData__form" onSubmit={BuyInFormdClickedonSubmit}>
                     <div className="AddBuyInData__forminput">
                         <label className="AddBuyInData__forminput--label" htmlFor="buyin_date">買入日期</label>
-                        <input type="date" id="AddBuyInData__forminput--buyin_date" className="AddBuyInData__forminput--input" required/>
+                        <input type="text" id="AddBuyInData__forminput--buyin_date" className="AddBuyInData__forminput--input" required/>
                     </div>
                     
                     <div className="AddBuyInData__forminput">
