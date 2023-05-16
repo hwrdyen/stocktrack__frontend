@@ -1,0 +1,72 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variable" as *;
+
+.AddBuyInData{
+    // AddBuyInData__container
+    &__container {
+        @include mobile {
+            border: 1px solid black;
+            margin: 5px;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    // AddBuyInData__form
+    &__form {
+        @include mobile {
+            border: 1px solid grey;
+            margin: 5px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    // AddBuyInData__forminput
+    &__forminput {
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+            padding-right: 50px;
+            margin-bottom: 10px;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+
+        &--input {
+            @include mobile {
+                border: 1px solid black;
+            }
+            @include tablet {
+            }
+            @include desktop {
+            }
+        }
+
+        &--button {
+            @include mobile {
+                border: 1px solid black;
+                background-color: grey;
+                width: 80px;
+                margin: 10px 0px;
+                margin-left: auto;
+            }
+            @include tablet {
+            }
+            @include desktop {
+            }
+        }
+    }
+}

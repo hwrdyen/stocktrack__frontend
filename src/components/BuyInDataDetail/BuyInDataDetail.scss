@@ -1,0 +1,44 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variable" as *;
+
+.BuyInDataDetail{
+    // BuyInDataDetail__container
+    &__container {
+        @include mobile {
+            border: 1px solid black;
+            margin: 5px;
+            display: flex; 
+            flex-direction: column;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    // BuyInDataDetail__infosection
+    &__infosection {
+        @include mobile {
+            padding: 10px;
+            border-bottom: 1px solid black;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    // BuyInDataDetail__title
+    &__title {
+        @include mobile {
+            font-weight: bold;
+            color: grey;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+}

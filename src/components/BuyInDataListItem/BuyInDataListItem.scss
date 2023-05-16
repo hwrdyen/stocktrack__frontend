@@ -1,0 +1,31 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variable" as *;
+
+.BuyInDataListItem{
+    // BuyInDataListItem__container
+    &__container {
+        @include mobile {
+            border: 1px solid black;
+            margin: 5px;
+            display: grid; 
+            grid-template-columns: auto auto auto auto auto auto;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    // BuyInDataListItem__title
+    &__title {
+        @include mobile {
+            font-weight: bold;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+}

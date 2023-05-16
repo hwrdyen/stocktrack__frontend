@@ -1,0 +1,74 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variable" as *;
+
+.Header{
+    // Header__container
+    &__container {
+        background-color: $instock-graphite;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+
+}
+
+.Header-logo {
+    &__container {
+        @include mobile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    &__title {
+        @include mobile {
+            color: white;
+            font-weight: bold;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+}
+
+.Header-title {
+    &__container {
+
+        @include mobile {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    &__button {
+        @include mobile {
+            color: $instock-white;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+}
