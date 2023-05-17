@@ -13,10 +13,10 @@ import { useState, useEffect } from "react";
 // import Components
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import StockBase from "./pages/StockBase/StockBase.js";
 import BuyInRecord from "./pages/BuyInRecord/BuyInRecord.js";
 import BuyInDataDetail from "./components/BuyInDataDetail/BuyInDataDetail.jsx";
 import AddBuyInData from "./components/AddBuyInData/AddBuyInData.jsx";
+import EditBuyInData from "./components/EditBuyInData/EditBuyInData.jsx";
 
 function App() {
   const [RequiredReLoading, setRequiredReLoading] = useState(true);
@@ -26,6 +26,7 @@ function App() {
     function GetAllBuyInDataInfo() {
       return axios
           .get(`https://stocktrack-backend-api.herokuapp.com/allbuyindata`)
+          // .get(`http://localhost:8080/allbuyindata`)
           .then((element) => {
               let buyindata_info = element.data;
               setAllBuyInRecordData(buyindata_info);
@@ -73,6 +74,11 @@ function App() {
               <Route 
                 path="/addbuyinrecord" 
                 element={<AddBuyInData AllBuyInRecordData={AllBuyInRecordData} setAllBuyInRecordData={setAllBuyInRecordData} setRequiredReLoading={setRequiredReLoading}/>}
+              />
+
+              <Route 
+                path="/buyinrecord-edit/:buyinID" 
+                element={<EditBuyInData AllBuyInRecordData={AllBuyInRecordData} setAllBuyInRecordData={setAllBuyInRecordData} setRequiredReLoading={setRequiredReLoading}/>}
               />
   
           </Routes>

@@ -3,12 +3,22 @@
 @use "../../styles/typography" as *;
 @use "../../styles/variable" as *;
 
+a {
+    color: black;
+}
+
+.red_result {
+    color: red;
+    font-weight: bold;
+}
+
 .BuyInDataListItem{
     // BuyInDataListItem__container
     &__container {
         @include mobile {
             color: black;
             border: 1px solid black;
+            border-radius: 10px;
             margin: 5px;
             margin-bottom: 15px;
             display: grid; 
@@ -27,7 +37,7 @@
             grid-template-columns: auto auto auto auto;
         }
         @include tablet {
-            grid-template-columns: auto auto auto auto auto auto auto;
+            grid-template-columns: auto auto auto auto auto auto auto auto;
         }
         @include desktop {
         }
@@ -39,6 +49,80 @@
             border: 1px solid black;
         }
         @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    &__infobox:nth-child(1) {
+        @include mobile {
+            border-top-left-radius: 10px;
+        }
+        @include tablet {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        @include desktop {
+        }
+    }
+
+    &__infobox:nth-child(4) {
+        @include mobile {
+            border-top-right-radius: 10px;
+        }
+        @include tablet {
+            border-top-right-radius: unset;
+        }
+        @include desktop {
+        }
+    }
+
+    &__infobox:nth-child(7) {
+        @include mobile {
+            border-bottom-left-radius: 10px;
+        }
+        @include tablet {
+            border-bottom-left-radius: unset;
+        }
+        @include desktop {
+        }
+    }
+
+    &__infobox:nth-child(8) {
+        @include mobile {
+            border-bottom-right-radius: 10px;
+        }
+        @include tablet {
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        @include desktop {
+        }
+    }
+
+    // BuyInDataListItem__infobox:nth-child(5)
+    // BuyInDataListItem__infobox:nth-child(7)
+    &__infobox:nth-child(5),
+    &__infobox:nth-child(7) {
+        @include mobile {
+            grid-column: 1/3;
+        }
+        @include tablet {
+            grid-column: auto;
+        }
+        @include desktop {
+        }
+    }
+
+    // BuyInDataListItem__infobox:nth-child(6)
+    // BuyInDataListItem__infobox:nth-child(8)
+    &__infobox:nth-child(6),
+    &__infobox:nth-child(8) {
+        @include mobile {
+            grid-column: 3/5;
+        }
+        @include tablet {
+            grid-column: auto;
         }
         @include desktop {
         }
@@ -61,6 +145,7 @@
     &__result {
         @include mobile {
             padding-left: 5px;
+            min-height: 24px;
         }
         @include tablet {
         }
@@ -68,16 +153,47 @@
         }
     }
 
-    // BuyInDataListItem__button--delete
-    &__button--delete {
+    &__buttoncontainer {
         @include mobile {
-            background-color: $instock-graphite;
-            color: $instock-white;
-            cursor: pointer;
+            display: grid;
+            grid-template-rows: auto;
         }
         @include tablet {
         }
         @include desktop {
+        }
+    }
+    
+    &__button {
+        // BuyInDataListItem__button--delete
+        &--delete {
+            @include mobile {
+                background-color: $instock-graphite;
+                color: $instock-white;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+            @include tablet {
+            }
+            @include desktop {
+            }
+        }
+
+        // BuyInDataListItem__button--delete
+        &--edit {
+            @include mobile {
+                background-color: $instock-white;
+                color: $instock-graphite;
+                cursor: pointer;
+                border: 1px solid black;
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+            }
+            @include tablet {
+            }
+            @include desktop {
+            }
         }
     }
 }

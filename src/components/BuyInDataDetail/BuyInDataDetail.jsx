@@ -36,6 +36,10 @@ function BuyInDataDetail(props) {
                     <div>{CurrentBuyInRecord?.stock_name}</div>
                 </div>
                 <div className="BuyInDataDetail__infosection">
+                    <div className="BuyInDataDetail__title">目標價</div>
+                    <div>{CurrentBuyInRecord?.target_price}</div>
+                </div>
+                <div className="BuyInDataDetail__infosection">
                     <div className="BuyInDataDetail__title">買進金額</div>
                     <div>{CurrentBuyInRecord?.price_per_stock}</div>
                 </div>

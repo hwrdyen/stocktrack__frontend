@@ -1,0 +1,94 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variable" as *;
+
+.EditBuyInData{
+    // EditBuyInData__container
+    &__container {
+        @include mobile {
+            border: 1px solid black;
+            margin: 5px;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    // EditBuyInData__button--previous
+    &__button--previous {
+        @include mobile {
+            margin-top: 10px;
+            margin-left: 10px;
+            padding: 5px; 
+            border-radius: 10px;
+            background-color: $instock-graphite;
+            color: $instock-white;
+            cursor: pointer;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    // EditBuyInData__form
+    &__form {
+        @include mobile {
+            border: 1px solid grey;
+            margin: 5px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+
+    // EditBuyInData__forminput
+    &__forminput {
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+            padding-right: 50px;
+            margin-bottom: 10px;
+        }
+        @include tablet {
+        }
+        @include desktop {
+        }
+
+        // EditBuyInData__forminput--input
+        &--input {
+            @include mobile {
+                border: 1px solid black;
+            }
+            @include tablet {
+            }
+            @include desktop {
+            }
+        }
+
+        // EditBuyInData__forminput--button
+        &--button {
+            @include mobile {
+                background-color: $instock-graphite;
+                color: $instock-white;
+                width: 80px;
+                margin: 10px 0px;
+                padding: 5px;
+                border-radius: 10px;
+                margin-left: auto;
+                cursor: pointer;
+            }
+            @include tablet {
+            }
+            @include desktop {
+            }
+        }
+    }
+}

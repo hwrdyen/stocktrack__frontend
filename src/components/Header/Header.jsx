@@ -10,7 +10,7 @@ function Header() {
             <div className="Header__container">
                 <div className="Header-logo__container">
                     <NavLink to={"/"}>
-                        <div className="Header-logo__title">Sunny Stock Trade</div>
+                        <div className="Header-logo__title">Sunny Stock Track</div>
                     </NavLink>
                 </div>
                 
