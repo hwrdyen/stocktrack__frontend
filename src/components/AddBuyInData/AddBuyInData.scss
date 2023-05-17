@@ -54,7 +54,7 @@
             display: flex;
             flex-direction: column;
             padding-left: 10px;
-            padding-right: 50px;
+            padding-right: 10px;
             margin-bottom: 10px;
         }
         @include tablet {
@@ -62,10 +62,24 @@
         @include desktop {
         }
 
+        // AddBuyInData__forminput--label
+        &--label {
+            @include mobile {
+                margin-bottom: 5px;
+            }
+            @include tablet {
+            }
+            @include desktop {
+            }
+        }
+
         // AddBuyInData__forminput--input
         &--input {
             @include mobile {
                 border: 1px solid black;
+                border-radius: 10px;
+                padding: 2px;
+                padding-left: 5px;
             }
             @include tablet {
             }
@@ -78,11 +92,12 @@
             @include mobile {
                 background-color: $instock-graphite;
                 color: $instock-white;
-                width: 80px;
+                width: 100px;
                 margin: 10px 0px;
                 padding: 5px;
                 border-radius: 10px;
                 margin-left: auto;
+                margin-right: 10px;
                 cursor: pointer;
             }
             @include tablet {

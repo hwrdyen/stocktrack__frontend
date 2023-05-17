@@ -113,16 +113,16 @@ function AddBuyInData(props) {
                         <label className="AddBuyInData__forminput--label" htmlFor="today_endmarketprice">收盤價</label>
                         <input type="number" step="any" id="AddBuyInData__forminput--today_endmarketprice" className="AddBuyInData__forminput--input" />
                     </div>
+
+                    <div className="AddBuyInData__forminput">
+                        <label className="AddBuyInData__forminput--label" htmlFor="today_supportprice">支撐</label>
+                        <input type="number" step="any" id="AddBuyInData__forminput--today_supportprice" className="AddBuyInData__forminput--input" />
+                    </div>
                     
                     <div className="AddBuyInData__forminput">
                         <label className="AddBuyInData__forminput--label" htmlFor="today_pointprice">壓力</label>
                         <input type="number" step="any" id="AddBuyInData__forminput--today_pointprice" className="AddBuyInData__forminput--input" />
                     </div>
-                    
-                    <div className="AddBuyInData__forminput">
-                        <label className="AddBuyInData__forminput--label" htmlFor="today_supportprice">支撐</label>
-                        <input type="number" step="any" id="AddBuyInData__forminput--today_supportprice" className="AddBuyInData__forminput--input" />
-                    </div>          
                     
                     <div className="AddBuyInData__forminput">
                         <label className="AddBuyInData__forminput--label" htmlFor="buyin_reason">買入原因</label>

@@ -48,12 +48,12 @@ function BuyInDataDetail(props) {
                     <div>{CurrentBuyInRecord?.today_endmarketprice}</div>
                 </div>
                 <div className="BuyInDataDetail__infosection">
-                    <div className="BuyInDataDetail__title">壓力</div>
-                    <div>{CurrentBuyInRecord?.today_pointprice}</div>
-                </div>
-                <div className="BuyInDataDetail__infosection">
                     <div className="BuyInDataDetail__title">支撐</div>
                     <div>{CurrentBuyInRecord?.today_supportprice}</div>
+                </div>
+                <div className="BuyInDataDetail__infosection">
+                    <div className="BuyInDataDetail__title">壓力</div>
+                    <div>{CurrentBuyInRecord?.today_pointprice}</div>
                 </div>
                 <div className="BuyInDataDetail__infosection">
                     <div className="BuyInDataDetail__title">買入原因</div>

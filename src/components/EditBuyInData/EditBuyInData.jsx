@@ -120,16 +120,16 @@ function EditBuyInData(props) {
                         <label className="EditBuyInData__forminput--label" htmlFor="today_endmarketprice">收盤價</label>
                         <input type="number" step="any" id="EditBuyInData__forminput--today_endmarketprice" className="EditBuyInData__forminput--input" defaultValue={CurrentBuyInRecord?.today_endmarketprice} />
                     </div>
+
+                    <div className="EditBuyInData__forminput">
+                        <label className="EditBuyInData__forminput--label" htmlFor="today_supportprice">支撐</label>
+                        <input type="number" step="any" id="EditBuyInData__forminput--today_supportprice" className="EditBuyInData__forminput--input" defaultValue={CurrentBuyInRecord?.today_supportprice} />
+                    </div> 
                     
                     <div className="EditBuyInData__forminput">
                         <label className="EditBuyInData__forminput--label" htmlFor="today_pointprice">壓力</label>
                         <input type="number" step="any" id="EditBuyInData__forminput--today_pointprice" className="EditBuyInData__forminput--input" defaultValue={CurrentBuyInRecord?.today_pointprice} />
-                    </div>
-                    
-                    <div className="EditBuyInData__forminput">
-                        <label className="EditBuyInData__forminput--label" htmlFor="today_supportprice">支撐</label>
-                        <input type="number" step="any" id="EditBuyInData__forminput--today_supportprice" className="EditBuyInData__forminput--input" defaultValue={CurrentBuyInRecord?.today_supportprice} />
-                    </div>          
+                    </div>         
                     
                     <div className="EditBuyInData__forminput">
                         <label className="EditBuyInData__forminput--label" htmlFor="buyin_reason">買入原因</label>

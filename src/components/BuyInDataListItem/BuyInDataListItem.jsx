@@ -62,12 +62,12 @@ function BuyInDataListItem(props) {
                             <div className="BuyInDataListItem__result">{props.BuyInSingleRecord?.today_endmarketprice}</div>
                         </div>
                         <div className="BuyInDataListItem__infobox">
-                            <div className="BuyInDataListItem__title">壓力</div>
-                            <div className="BuyInDataListItem__result">{props.BuyInSingleRecord?.today_pointprice}</div>
-                        </div>
-                        <div className="BuyInDataListItem__infobox">
                             <div className="BuyInDataListItem__title">支撐</div>
                             <div className="BuyInDataListItem__result">{props.BuyInSingleRecord?.today_supportprice}</div>
+                        </div>
+                        <div className="BuyInDataListItem__infobox">
+                            <div className="BuyInDataListItem__title">壓力</div>
+                            <div className="BuyInDataListItem__result">{props.BuyInSingleRecord?.today_pointprice}</div>
                         </div>
                     </div>
                 </NavLink>
