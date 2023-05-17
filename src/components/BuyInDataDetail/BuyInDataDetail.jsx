@@ -14,7 +14,7 @@ function BuyInDataDetail(props) {
         setCurrentBuyInRecord(CurrentBuyInRecordDetails);
     }, [buyinID])
 
-    console.log(CurrentBuyInRecord);
+    // console.log(CurrentBuyInRecord);
 
 
     return (
@@ -40,11 +40,15 @@ function BuyInDataDetail(props) {
                     <div>{CurrentBuyInRecord?.price_per_stock}</div>
                 </div>
                 <div className="BuyInDataDetail__infosection">
-                    <div className="BuyInDataDetail__title">今日的點位(壓力)</div>
+                    <div className="BuyInDataDetail__title">收盤價</div>
+                    <div>{CurrentBuyInRecord?.today_endmarketprice}</div>
+                </div>
+                <div className="BuyInDataDetail__infosection">
+                    <div className="BuyInDataDetail__title">壓力</div>
                     <div>{CurrentBuyInRecord?.today_pointprice}</div>
                 </div>
                 <div className="BuyInDataDetail__infosection">
-                    <div className="BuyInDataDetail__title">今日的支撐</div>
+                    <div className="BuyInDataDetail__title">支撐</div>
                     <div>{CurrentBuyInRecord?.today_supportprice}</div>
                 </div>
                 <div className="BuyInDataDetail__infosection">

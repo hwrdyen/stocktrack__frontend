@@ -17,6 +17,7 @@ function AddBuyInData(props) {
         stock_id: null,
         stock_name: null,
         price_per_stock: null,
+        today_endmarketprice: null,
         today_pointprice: null,
         today_supportprice: null,
         buyin_reason: null,
@@ -29,9 +30,10 @@ function AddBuyInData(props) {
             axios
             .post(`https://stocktrack-backend-api.herokuapp.com/allbuyindata/`, AddBuyInDataInfo)
             .then((res) => {
-              console.log(res);
+            //   console.log(res);
               setClickAddBuyInSubmit(false);
-              navigate("/");
+              props.setRequiredReLoading(true);
+              navigate("/buyinrecord");
             })
             .catch((err) => console.log(err));
         }
@@ -48,6 +50,7 @@ function AddBuyInData(props) {
         let value_stock_id = document.getElementById("AddBuyInData__forminput--stock_id").value;
         let value_stock_name = document.getElementById("AddBuyInData__forminput--stock_name").value;
         let value_price_per_stock = document.getElementById("AddBuyInData__forminput--price_per_stock").value;
+        let value_today_endmarketprice = document.getElementById("AddBuyInData__forminput--today_endmarketprice").value;
         let value_today_pointprice = document.getElementById("AddBuyInData__forminput--today_pointprice").value;
         let value_today_supportprice = document.getElementById("AddBuyInData__forminput--today_supportprice").value;
         let value_buyin_reason = document.getElementById("AddBuyInData__forminput--buyin_reason").value;
@@ -58,6 +61,7 @@ function AddBuyInData(props) {
             stock_id: value_stock_id, 
             stock_name: value_stock_name, 
             price_per_stock: value_price_per_stock,
+            today_endmarketprice: value_today_endmarketprice,
             today_pointprice: value_today_pointprice,
             today_supportprice: value_today_supportprice,
             buyin_reason: value_buyin_reason,
@@ -93,17 +97,22 @@ function AddBuyInData(props) {
 
                     <div className="AddBuyInData__forminput">
                         <label className="AddBuyInData__forminput--label" htmlFor="price_per_stock">買進金額</label>
-                        <input type="number" id="AddBuyInData__forminput--price_per_stock" className="AddBuyInData__forminput--input" required/>
+                        <input type="number" step="any" id="AddBuyInData__forminput--price_per_stock" className="AddBuyInData__forminput--input" required/>
+                    </div>
+
+                    <div className="AddBuyInData__forminput">
+                        <label className="AddBuyInData__forminput--label" htmlFor="today_endmarketprice">收盤價</label>
+                        <input type="number" step="any" id="AddBuyInData__forminput--today_endmarketprice" className="AddBuyInData__forminput--input" required/>
                     </div>
                     
                     <div className="AddBuyInData__forminput">
-                        <label className="AddBuyInData__forminput--label" htmlFor="today_pointprice">今日的點位(壓力)</label>
-                        <input type="number" id="AddBuyInData__forminput--today_pointprice" className="AddBuyInData__forminput--input" required/>
+                        <label className="AddBuyInData__forminput--label" htmlFor="today_pointprice">壓力</label>
+                        <input type="number" step="any" id="AddBuyInData__forminput--today_pointprice" className="AddBuyInData__forminput--input" required/>
                     </div>
                     
                     <div className="AddBuyInData__forminput">
-                        <label className="AddBuyInData__forminput--label" htmlFor="today_supportprice">今日的支撐</label>
-                        <input type="number" id="AddBuyInData__forminput--today_supportprice" className="AddBuyInData__forminput--input" required/>
+                        <label className="AddBuyInData__forminput--label" htmlFor="today_supportprice">支撐</label>
+                        <input type="number" step="any" id="AddBuyInData__forminput--today_supportprice" className="AddBuyInData__forminput--input" required/>
                     </div>          
                     
                     <div className="AddBuyInData__forminput">
@@ -113,7 +122,7 @@ function AddBuyInData(props) {
                     
                     <div className="AddBuyInData__forminput">
                         <label className="AddBuyInData__forminput--label" htmlFor="stoploss_price">停損價</label>
-                        <input type="number" id="AddBuyInData__forminput--stoploss_price" className="AddBuyInData__forminput--input" required/>
+                        <input type="number" step="any" id="AddBuyInData__forminput--stoploss_price" className="AddBuyInData__forminput--input" required/>
                     </div>
 
                     <button className="AddBuyInData__forminput--button" id="AddBuyInData__sendbutton">送出</button>

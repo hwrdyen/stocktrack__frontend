@@ -13,7 +13,7 @@ function BuyInRecord(props) {
                     <button className="BuyInRecord__button">&#43;新增買入紀錄</button>
                 </NavLink>
                 <div>{props.AllBuyInRecordData.map(BuyInSingleRecord => (
-                    <BuyInDataListItem BuyInSingleRecord={BuyInSingleRecord} setRequiredReLoading={props.setRequiredReLoading}/>
+                    <BuyInDataListItem key={BuyInSingleRecord?.id} BuyInSingleRecord={BuyInSingleRecord} setRequiredReLoading={props.setRequiredReLoading}/>
                 ))
                 }</div>
             </div>

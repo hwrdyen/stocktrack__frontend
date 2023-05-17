@@ -24,10 +24,10 @@
     &__infosection {
         @include mobile {
             display: grid; 
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto auto auto auto;
         }
         @include tablet {
-            grid-template-columns: auto auto auto auto auto auto;
+            grid-template-columns: auto auto auto auto auto auto auto;
         }
         @include desktop {
         }

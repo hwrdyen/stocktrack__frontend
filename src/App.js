@@ -37,7 +37,7 @@ function App() {
     }
   }, [AllBuyInRecordData, RequiredReLoading])
 
-  console.log(AllBuyInRecordData);
+  // console.log(AllBuyInRecordData);
 
   if (AllBuyInRecordData === []) {
     return (
